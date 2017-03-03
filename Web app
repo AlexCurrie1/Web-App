@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Travel Junkie</title>
+  </head>
+  <body>
+<header id="PageHeader">
+  <img src="map.png" id="SiteLogo"/>
+  <h1 id="SiteTitle">Travel</h1>
+</header>
+  </body>
+</html>
