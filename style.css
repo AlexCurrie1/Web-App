@@ -1,5 +1,11 @@
 h1 {
   color: blue;
   font-family: 'Lobster Two', cursive;
-  font-size: '50pt'; 
+  font-size: 50pt;
+  text-align: center;
+}
+
+html {
+    background: url("map.png") no-repeat center center fixed;
+
 }
