@@ -1,15 +1,16 @@
+<!-- site title css -->
 h1 {
   color: blue;
   font-family: 'Lobster Two', cursive;
   font-size: 50pt;
   text-align: center;
 }
-
+<!--  set map as background -->
 html {
     background: url("map.png") no-repeat center center fixed;
     background-size: 100% 100%;
 }
-
+<!-- search bar size edit -->
 .search_bar input[type="text"]{
 position:relative;
 left:40%;
