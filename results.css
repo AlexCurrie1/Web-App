@@ -1,17 +1,28 @@
-h1 {
+#SiteTitle {
+  z-index: 100;
+  position: relative;
   color: blue;
   font-family: 'Lobster Two', cursive;
   font-size: 50pt;
   text-align: center;
 }
 
-html {
-    background: url("map.png") no-repeat center center fixed;
-    background-size: 300% 300%;
+#googleMap {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: -200px;
+  left: 0;
+  right: 0;
+  z-index: 0;
 }
 
-.boxed {
-  border: 1px solid black ;
-  width: 200px;
-  height: 400px;
+#boxed {
+  z-index: 100;
+  position: relative;
+    border: 1px solid black ;
+    width: 200px;
+    height: 400px;
+
+  }
 }
