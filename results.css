@@ -1,0 +1,17 @@
+h1 {
+  color: blue;
+  font-family: 'Lobster Two', cursive;
+  font-size: 50pt;
+  text-align: center;
+}
+
+html {
+    background: url("map.png") no-repeat center center fixed;
+    background-size: 300% 300%;
+}
+
+.boxed {
+  border: 1px solid black ;
+  width: 200px;
+  height: 400px;
+}
