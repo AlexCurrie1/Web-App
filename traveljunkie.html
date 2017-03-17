@@ -1,31 +1,28 @@
 <!doctype html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <title>Travel Junkie</title> <!--title of web app-->
+
+
+    <!--link to css sheet-->
+    <link rel=stylesheet href="style.css" type="text/css" media=screen>
+    <!--link to css for font -->
+    <link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">
   </head>
-  <body>
-<header id="PageHeader">
-    <h1 id="SiteTitle">Travel Junkie</h1> <!--heading (top) -->
-<!-- <img src="map.png" id="SiteLogo"/>  background image -->
-</header>
-  </body>
-</html>
-</head>
-<!--link to css sheet-->
-<link rel=stylesheet href="style.css" type="text/css" media=screen>
-<!--link to css for font -->
-<link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">
 
+<!--logo image
+  <div id="sitelogo">
+             <div id="logoimage">
+                 <img src="logo.png" id="logoimage"/>
+             </div>
+  </div>
+-->
 <body>
-
-    <div class="search_bar">
-
+  <!--search bar-->
+    <div class="search-area">
         <input id="search_bar" type="text" name="search" placeholder="search">
+      </br>
         <!--link for button-->
-          <input id ="button" onclick="location.href='resultspage.html';" value ="Results" />
-
+        <input type="button" id ="search_button" onclick="location.href='resultspage.html';" value ="Search" />
     </div>
-
 </body>
 </html>
