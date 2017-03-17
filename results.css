@@ -25,6 +25,8 @@
     height: 400px;
     background-color: #336699;
     color: white;
+    margin-left: auto;
+    margin-right: 10px;
 
   }
 }
