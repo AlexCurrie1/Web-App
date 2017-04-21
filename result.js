@@ -6,6 +6,7 @@ $( document ).ready(function() {
       return results[1] || 0;
   }
   var search_string = $.urlParam('search');
+  console.log(search_string);
 
 
 });
