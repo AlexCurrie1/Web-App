@@ -9,12 +9,14 @@ $( document ).ready(function() {
   console.log(search_string);
 
 
+
 });
 
 function myMap() {
 var mapProp= {
     center:new google.maps.LatLng(51.508742,-0.120850),
     zoom:9,
+    disableDefaultUI: true,
 };
 var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 }
