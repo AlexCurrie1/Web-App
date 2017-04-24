@@ -21,21 +21,17 @@ var mapProp= {
 
 
 function myMap() {
-      //  var map = new google.maps.Map(document.getElementById('map'),
-      //    zoom: 8,
-        //  center: {lat: -34.397, lng: 150.644}
-          var latlng = new google.maps.LatLng(-34.397,150.644);
-        var map = new google.maps.Map(document.getElementById('map'),{
-          center: latlng,
-          zoom: 8
+        var map = new google.maps.googleMap(document.getElementById('map'), {
+          zoom: 8,
+          center: {lat: -34.397, lng: 150.644}
         });
-      };
 
     var geocoder = new google.maps.Geocoder();
         document.getElementById('submit').addEventListener('click', function() {
-          geocodeAddress(geocoder, map);
+          geocodeAddress(geocoder, Map);
           console.log(geocoder);
         });
+
 
       function geocodeAddress(geocoder, resultsMap) {
         var address = document.getElementById('address').value;
@@ -51,3 +47,4 @@ function myMap() {
       };
     });
   }
+  };
