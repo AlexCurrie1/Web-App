@@ -58,28 +58,12 @@ autocomplete = new google.maps.places.Autocomplete (
 places = new google.maps.places.PlacesService(map);
 autocomplete.addListener('place_changed', onPlaceChanged);
 
-document.getElementById('country').addEventListener(
-  'change', setAutocompleteCountry);
-
-function onPlaceChanged(){
-  var place = autocomplete.getPlace();
-  if (place.geometry) {
-    map.panTo(place.geometry.location);
-    map.setZoom(15);
-    search();
-  } else {
-    document.getElementById('autocomplete').placeholder = 'Enter a city'
-  }
-}
 
   //var place = search_string;
 var geocoder = new google.maps.Geocoder;
 var marker = google.maps.Marker({map: map
 });
 
-//marker.addListener('click'), function (){
-//  infowindow.open(map,marker);
-//};
 
 geocoder.geocode({'placeId': place.place_id}, function(results, status) {
 
