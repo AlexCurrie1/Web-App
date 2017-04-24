@@ -21,7 +21,7 @@ var mapProp= {
   //  disableDefaultUI: true,
 };
 
-var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 }
 
 var map,places,infoWindow;
