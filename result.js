@@ -21,9 +21,13 @@ var mapProp= {
 
 
 function myMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 8,
-          center: {lat: -34.397, lng: 150.644}
+      //  var map = new google.maps.Map(document.getElementById('map'), {
+      //    zoom: 8,
+        //  center: {lat: -34.397, lng: 150.644}
+          var latlng = new google.maps.LatLng(-34.397,150.644);
+          map = new google.maps.Map(document.getElementById('map'),
+          center: latlng,
+          zoom: 8
         });
 
     var geocoder = new google.maps.Geocoder();
