@@ -21,14 +21,14 @@ var mapProp= {
 
 
 function myMap() {
-        var map = new google.maps.googleMap(document.getElementById('googleMap'), {
+        var map = new google.maps.googleMap(document.getElementById('map'), {
           zoom: 8,
           center: {lat: -34.397, lng: 150.644}
         });
 
     var geocoder = new google.maps.Geocoder();
         document.getElementById('submit').addEventListener('click', function() {
-          geocodeAddress(geocoder, googleMap);
+          geocodeAddress(geocoder, map);
           console.log(geocoder);
         });
   };
@@ -39,7 +39,7 @@ function myMap() {
           if (status === 'OK') {
             resultsMap.setCenter(results[0].geometry.location);
             var marker = new google.maps.Marker({
-              googleMap: resultsMap,
+            map: resultsMap,
               position: results[0].geometry.location
             });
           } else {
