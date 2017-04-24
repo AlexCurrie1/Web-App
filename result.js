@@ -14,8 +14,22 @@ $( document ).ready(function() {
 
 
 function myMap() {
+  function geocodeAddress(geocoder, resultsMap) {
+    var address = document.getElementById('address').value;
+    geocoder.geocode({'address': address}, function(results, status) {
+      if (status === 'OK') {
+        resultsMap.setCenter(results[0].geometry.location);
+        var marker = new google.maps.Marker({
+        map: resultsMap,
+          position: results[0].geometry.location
+        });
+      } else {
+        alert('Geocode was not successful for the following reason: ' + status);
+  };
+});
+};
+
         var mapProp= {
-        new google.maps.Marker,
           zoom: 8,
         };
         var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
@@ -25,19 +39,4 @@ function myMap() {
          function geocodeAddress(geocoder, map) {
           console.log(geocoder);
         };
-  };
-
-      function geocodeAddress(geocoder, resultsMap) {
-        var address = document.getElementById('address').value;
-        geocoder.geocode({'address': address}, function(results, status) {
-          if (status === 'OK') {
-            resultsMap.setCenter(results[0].geometry.location);
-            var marker = new google.maps.Marker({
-            map: resultsMap,
-              position: results[0].geometry.location
-            });
-          } else {
-            alert('Geocode was not successful for the following reason: ' + status);
-      };
-    });
   };
