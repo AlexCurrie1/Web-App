@@ -1,15 +1,7 @@
 
 $( document ).ready(function() {
 
-  function myMap() {
-  var mapProp= {
-      center:new google.maps.LatLng(51.508742,-0.120850),
-      zoom:9,
-    //  disableDefaultUI: true,
-  };
 
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-}
   $.urlParam = function(name)
   {
       var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
@@ -21,6 +13,16 @@ $( document ).ready(function() {
 
 
 });
+
+function myMap() {
+var mapProp= {
+    center:new google.maps.LatLng(51.508742,-0.120850),
+    zoom:9,
+  //  disableDefaultUI: true,
+};
+
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
 /*
 var map,places,infoWindow;
 var markers = [];
