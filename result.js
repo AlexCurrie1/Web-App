@@ -15,19 +15,20 @@ $( document ).ready(function() {
 
 function myMap() {
         var mapProp= {
-          center:new google.maps.Marker),
+          center:new google.maps.LatLng(51.508742,-0.120850),
           zoom: 8,
         };
         var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
-
-    var geocoder = new google.maps.Geocoder(document.getElementById('submit'));
-         function geocodeAddress(geocoder, map) {
-          console.log(geocoder);
-        };
   };
 
       function geocodeAddress(geocoder, resultsMap) {
+
+            var geocoder = new google.maps.Geocoder(document.getElementById('submit'));
+                 function geocodeAddress(geocoder, map) {
+                  console.log(geocoder);
+                };
+                
         var address = document.getElementById('address').value;
         geocoder.geocode({'address': address}, function(results, status) {
           if (status === 'OK') {
