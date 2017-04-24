@@ -28,7 +28,7 @@ function initMap() {
 
     var geocoder = new google.maps.Geocoder();
         document.getElementById('submit').addEventListener('click', function() {
-          geocodeAddress(geocoder, map);
+          geocodeAddress(geocoder, googleMap);
           console.log(geocoder);
         });
   };
@@ -39,7 +39,7 @@ function initMap() {
           if (status === 'OK') {
             resultsMap.setCenter(results[0].geometry.location);
             var marker = new google.maps.Marker({
-              map: resultsMap,
+              googleMap: resultsMap,
               position: results[0].geometry.location
             });
           } else {
