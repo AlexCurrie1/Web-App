@@ -12,7 +12,7 @@ $( document ).ready(function() {
 
 });
 
-var map,places,infoWindow;
+/*var map,places,infoWindow;
 var markers = [];
 var autocomplete;
 var countryRestrict = {'country': 'uk'};
@@ -36,15 +36,15 @@ function initMap(){
   }
 )};
 
-infoWindow = new google.maps.infoWindow({
+infoWindow = new google.maps.InfoWindow({
   content: document.getElementById('info-content')
 });
 
-autocomplete = new google.maps.places.Autocomplete(
+autocomplete = new google.maps.places.Autocomplete (
   document.getElementById('autocomplete')), {
     types: ['(cities)'],
     componetRestrictions: countryRestrict
-  });
+  };
 
 places = new google.maps.places.PlacesService(map);
 autocomplete.addListener('place_changed', onPlaceChanged);
@@ -101,3 +101,4 @@ var mapProp= {
 };
 //var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 }
+*/
