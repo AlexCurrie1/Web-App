@@ -19,15 +19,14 @@ function myMap() {
           zoom: 8,
         };
         var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-      };
 
-    var geocoder = new google.maps.Geocoder(
+
+    var geocoder = new google.maps.Geocoder();
         document.getElementById('submit').addEventListener('click', function() {
-          geocodeAddress(geocoder, Map);
-          );
+          geocodeAddress(geocoder, map);
           console.log(geocoder);
         });
-
+  };
 
       function geocodeAddress(geocoder, resultsMap) {
         var address = document.getElementById('address').value;
@@ -42,4 +41,4 @@ function myMap() {
             alert('Geocode was not successful for the following reason: ' + status);
       };
     });
-  }
+  };
