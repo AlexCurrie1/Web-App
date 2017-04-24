@@ -10,31 +10,28 @@ $( document ).ready(function() {
   var search_string = $.urlParam('search');
   console.log(search_string);
 
-
-
 });
-
-function myMap() {
-var mapProp= {
-    center:new google.maps.LatLng(51.508742,-0.120850),
-    zoom:9,
-  //  disableDefaultUI: true,
-};
-
-var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-}
 
 function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 8,
           center: {lat: -34.397, lng: 150.644}
         });
+      };
+/*function myMap() {
+var mapProp= {
+    center:new google.maps.LatLng(51.508742,-0.120850),
+    zoom:9,
+  //  disableDefaultUI: true,
+};
+*/
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
         var geocoder = new google.maps.Geocoder();
 
         document.getElementById('submit').addEventListener('click', function() {
           geocodeAddress(geocoder, map);
         });
-      }
 
       function geocodeAddress(geocoder, resultsMap) {
         var address = document.getElementById('address').value;
