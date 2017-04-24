@@ -48,9 +48,6 @@ function myMap(){
   }
 )};
 
-infoWindow = new google.maps.InfoWindow( {
-  content: document.getElementById('info-content')
-});
 
 autocomplete = new google.maps.places.Autocomplete (
   document.getElementById('autocomplete')), {
@@ -80,9 +77,9 @@ var geocoder = new google.maps.Geocoder;
 var marker = google.maps.Marker({map: map
 });
 
-marker.addListener('click'), function (){
-  infowindow.open(map,marker);
-};
+//marker.addListener('click'), function (){
+//  infowindow.open(map,marker);
+//};
 
 geocoder.geocode({'placeId': place.place_id}, function(results, status) {
 
@@ -102,5 +99,5 @@ geocoder.geocode({'placeId': place.place_id}, function(results, status) {
   infowindowContent.children['place-id'].textContent = place.place_id;
   infowindowContent.children['place-address'].textContent =
       results[0].formatted_address;
-  infowindow.open(map, marker);
+  //infowindow.open(map, marker);
 });
