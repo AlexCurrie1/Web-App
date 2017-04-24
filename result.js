@@ -1,5 +1,15 @@
 
 $( document ).ready(function() {
+
+  function myMap() {
+  var mapProp= {
+      center:new google.maps.LatLng(51.508742,-0.120850),
+      zoom:9,
+    //  disableDefaultUI: true,
+  };
+
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
   $.urlParam = function(name)
   {
       var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
@@ -92,13 +102,4 @@ geocoder.geocode({'placeId': place.place_id}, function(results, status) {
       results[0].formatted_address;
   infowindow.open(map, marker);
 });
-
-function myMap() {
-var mapProp= {
-    center:new google.maps.Marker,
-    zoom:9,
-    disableDefaultUI: true,
-};
-//var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-}
 */
