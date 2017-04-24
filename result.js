@@ -11,8 +11,8 @@ $( document ).ready(function() {
 
 
 });
-
-/*var map,places,infoWindow;
+/*
+var map,places,infoWindow;
 var markers = [];
 var autocomplete;
 var countryRestrict = {'country': 'uk'};
@@ -25,7 +25,7 @@ var countries = {
 }
 };
 
-function initMap(){
+function myMap(){
   map = new google.maps.Map(document.getElementById('map'), {
     zoom: countries['uk'].zoom,
     center: countries['uk'].center,
