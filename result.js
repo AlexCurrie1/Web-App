@@ -11,14 +11,6 @@ $( document ).ready(function() {
 
 
 });
-
-function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 8,
-          center: {lat: -34.397, lng: 150.644}
-          console.log(map);
-        });
-      };
 /*function myMap() {
 var mapProp= {
     center:new google.maps.LatLng(51.508742,-0.120850),
@@ -26,7 +18,12 @@ var mapProp= {
   //  disableDefaultUI: true,
 };
 */
-var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 8,
+          center: {lat: -34.397, lng: 150.644}
+        });
+      };
 
         var geocoder = new google.maps.Geocoder();
 
