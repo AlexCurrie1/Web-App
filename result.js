@@ -25,10 +25,11 @@ function myMap() {
       //    zoom: 8,
         //  center: {lat: -34.397, lng: 150.644}
           var latlng = new google.maps.LatLng(-34.397,150.644);
-        var map = new google.maps.Map(document.getElementById('map'),
+        var map = new google.maps.Map(document.getElementById('map'),{
           center: latlng,
           zoom: 8
-        });
+        }
+      });
 
     var geocoder = new google.maps.Geocoder();
         document.getElementById('submit').addEventListener('click', function() {
