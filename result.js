@@ -48,7 +48,7 @@ function myMap(){
   }
 )};
 
-infoWindow = new google.maps.InfoWindow({
+infoWindow = new google.maps.InfoWindow( {
   content: document.getElementById('info-content')
 });
 
