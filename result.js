@@ -12,8 +12,38 @@ $( document ).ready(function() {
 
 });
 
+var map,places,infoWindow;
+var markers = [];
+var autocomplete;
+var countryRestrict = {'country': 'uk'};
+var MARKER_PATH = 'https://developers.google.com/maps/documentation/javascript/images/marker_green';
+var hostnameRegexp = new RegExp('^https?://.+?/');
+
+var countries = {
+  'uk': {center:{lat:54.8,lng:-4.6},
+  zoom:5
+}
+};
+
+function initMap(){
+  map = new google.maps.Map(document.getElementById('map'), {
+    zoom: countries['uk'].zoom,
+    center: countries['uk'].center,
+    mapTypeControl: false,
+    panControl: false,
+    zoomcontrol: false,
+    streetViewControl: false
+  }
+)};
 
 var place = search_string;
+var geocoder = new google.maps.Geocoder;
+var marker = google.maps.Marker({map: map
+});
+
+marker.addListener('click'), function (){
+  infowindow.open(map,marker);
+};
 
 geocoder.geocode({'placeId': place.place_id}, function(results, status) {
 
@@ -48,6 +78,3 @@ var mapProp= {
 };
 var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 }
-
-
-      }

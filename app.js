@@ -10,10 +10,4 @@ $( document ).ready(function() {
       var url = base+"resultspage.html?search="+search_string;
       $(location).attr('href',url);
     });
-    
-    function OnLoad () {
-      var searchControl = newgoogle.search.SearchControl();
-      var localSearch = new google.search.LocalSearch();
-      searchControl.addSearcher(localSearch);
-      searchControl.addSearcher(new google.search.MapsSearch());
-    }
+  });
