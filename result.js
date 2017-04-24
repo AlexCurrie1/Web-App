@@ -36,7 +36,34 @@ function initMap(){
   }
 )};
 
-var place = search_string;
+infoWindow = new google.maps.infoWindow({
+  content: document.getElementById('info-content')
+});
+
+autocomplete = new google.maps.places.Autocomplete(
+  document.getElementById('autocomplete')), {
+    types: ['(cities)'],
+    componetRestrictions: countryRestrict
+  });
+
+places = new google.maps.places.PlacesService(map);
+autocomplete.addListener('place_changed', onPlaceChanged);
+
+document.getElementById('country').addEventListener(
+  'change', setAutocompleteCountry);
+
+function onPlaceChanged(){
+  var place = autocomplete.getPlace();
+  if (place.geometry) {
+    map.panTo(place.geometry.location);
+    map.setZoom(15);
+    search();
+  } else {
+    document.getElementById('autocomplete').placeholder = 'Enter a city'
+  }
+}
+
+  //var place = search_string;
 var geocoder = new google.maps.Geocoder;
 var marker = google.maps.Marker({map: map
 });
@@ -66,15 +93,11 @@ geocoder.geocode({'placeId': place.place_id}, function(results, status) {
   infowindow.open(map, marker);
 });
 
-
-
-
-
 function myMap() {
 var mapProp= {
     center:new google.maps.Marker,
     zoom:9,
     disableDefaultUI: true,
 };
-var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+//var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 }
