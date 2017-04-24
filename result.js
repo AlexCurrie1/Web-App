@@ -8,7 +8,7 @@ $( document ).ready(function() {
       return results[1] || 0;
   }
   var search_string = $.urlParam('search');
-  console.log(search_string);
+
 
 });
 
@@ -16,7 +16,7 @@ function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 8,
           center: {lat: -34.397, lng: 150.644}
-          console.log(run);
+          console.log(map);
         });
       };
 /*function myMap() {
