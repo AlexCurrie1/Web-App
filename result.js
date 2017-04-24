@@ -42,7 +42,7 @@ geocoder.geocode({'placeId': place.place_id}, function(results, status) {
 
 function myMap() {
 var mapProp= {
-    center:new google.maps.Marker;
+    center:new google.maps.Marker,
     zoom:9,
     disableDefaultUI: true,
 };
