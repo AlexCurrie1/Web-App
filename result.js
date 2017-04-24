@@ -36,7 +36,6 @@ function myMap() {
           geocodeAddress(geocoder, map);
           console.log(geocoder);
         });
-  };
 
       function geocodeAddress(geocoder, resultsMap) {
         var address = document.getElementById('address').value;
