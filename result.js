@@ -21,9 +21,10 @@ function myMap() {
         var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
       };
 
-    var geocoder = new google.maps.Geocoder();
+    var geocoder = new google.maps.Geocoder(
         document.getElementById('submit').addEventListener('click', function() {
           geocodeAddress(geocoder, Map);
+          );
           console.log(geocoder);
         });
 
