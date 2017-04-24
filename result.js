@@ -21,7 +21,7 @@ var mapProp= {
 
 
 function myMap() {
-        var map = new google.maps.googleMap(document.getElementById('map'), {
+        var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 8,
           center: {lat: -34.397, lng: 150.644}
         });
