@@ -11,17 +11,17 @@ $( document ).ready(function() {
 
 
 });
-/*function myMap() {
+function myMap() {
 var mapProp= {
     center:new google.maps.LatLng(51.508742,-0.120850),
     zoom:9,
   //  disableDefaultUI: true,
 };
-*/
 
 
+/*
 function myMap() {
-        var map = new google.maps.googleMap(document.getElementById('map'), {
+        var map = new google.maps.Maps(document.getElementById('map'), {
           zoom: 8,
           center: {lat: -34.397, lng: 150.644}
         });
@@ -47,4 +47,5 @@ function myMap() {
       };
     });
   }
+    */
   };
