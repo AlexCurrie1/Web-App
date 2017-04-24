@@ -23,7 +23,7 @@ var mapProp= {
 
 var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 }
-/*
+
 var map,places,infoWindow;
 var markers = [];
 var autocomplete;
@@ -104,4 +104,3 @@ geocoder.geocode({'placeId': place.place_id}, function(results, status) {
       results[0].formatted_address;
   infowindow.open(map, marker);
 });
-*/
