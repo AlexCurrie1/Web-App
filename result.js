@@ -29,9 +29,10 @@ function initMap() {
     var geocoder = new google.maps.Geocoder();
         document.getElementById('submit').addEventListener('click', function() {
           geocodeAddress(geocoder, map);
+          console.console.log(geocoder);
         });
   };
-  
+
       function geocodeAddress(geocoder, resultsMap) {
         var address = document.getElementById('address').value;
         geocoder.geocode({'address': address}, function(results, status) {
