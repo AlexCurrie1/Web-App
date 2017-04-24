@@ -21,11 +21,10 @@ function myMap() {
         var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
 
-    var geocoder = new google.maps.Geocoder();
-        document.getElementById('submit').addEventListener('click', function() {
-          geocodeAddress(geocoder, map);
+    var geocoder = new google.maps.Geocoder(document.getElementById('submit'));
+         function geocodeAddress(geocoder, map) {
           console.log(geocoder);
-        });
+        };
   };
 
       function geocodeAddress(geocoder, resultsMap) {
