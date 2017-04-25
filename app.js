@@ -18,6 +18,21 @@ $( document ).ready(function() {
 
   var places = search_bar.getPlaces();
   var bounds = new google.maps.LatLngBounds();
+  places.forEach(function(place)  {
+    if (!place.geometry)  {
+      console.log("returned place ontains no geometry");
+      return;
+    }
+markers.push(new google.maps.marker({
+  map: map,
+  icon: icon,
+  title: place.name,
+  position: place.geometry.location
+
+}));
+map.fitBounds(bounds);
+  });
+
   var i, place;
   for (i = 0; place = places[i]; i++) {
     (function(place) {
