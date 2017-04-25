@@ -10,6 +10,20 @@ $( document ).ready(function() {
 
 });
 
+<<<<<<< HEAD
+=======
+
+/*function myMap() {
+
+        var mapProp= {
+          center:new google.maps.LatLng(51.508742,-0.120850),
+          zoom: 8,
+        };
+
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+  };
+*/
+>>>>>>> origin/master
   function init() {
      var map = new google.maps.Map(document.getElementById('googleMap'), {
        center: {
