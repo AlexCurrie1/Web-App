@@ -18,18 +18,18 @@
              <div id="logoimage">
                  <img src="logo.png" id="logoimage"/>
              </div>
+             
+<!--gogole places for SEARCH BAR -->
+             <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+             <input id="search_bar" class="controls" type="text" placeholder="search box">
+               </br>
+             <input type="button" id ="search_button"  value ="Search" />
+             <div class="container" id="map-canvas" style="height:300px;"></div>
 
-
-
-  <!--search bar-->
-    <div class="search-area">
-        <input id="search_bar" type="text" name="search" placeholder="search">
-      </br>
-        <!--link for button-->
-        <input type="button" id ="search_button"  value ="Search" />
-    </div>
-</body>
 
 <script src="jquery-3.2.1.min.js"></script>
 <script src="app.js"></script>
+<script src="results.js"></script>
+
+</body>
 </html>
