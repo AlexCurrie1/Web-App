@@ -13,11 +13,13 @@ $( document ).ready(function() {
 });
 
   function init() {
-     var map = new google.maps.Map(document.getElementById('googleMap'), {
-       center: {
-         lat: 51.508742,
-         lng: -0.120850
-       },
-       zoom: 12
+    //var lat_long = https://maps.googleapis.com/maps/api/geocode/json?address=search_string&key=AIzaSyBxgZkKr24yAiOG5ohvLAdWytKXmA8PZxI
+
+    var map = new google.maps.Map(document.getElementById('googleMap'), {
+      center: {
+      lat: 51.508742,
+      lng: -0.120850
+     },
+      zoom: 12
      });
 };
