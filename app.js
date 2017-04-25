@@ -11,41 +11,19 @@ $( document ).ready(function() {
       $(location).attr('href',url);
     });
   });
-  // Create the search box and link UI Element
+  // Create the search box and link it to the UI element.
           var input = document.getElementById('search_bar');
           var searchBox = new google.maps.places.SearchBox(input);
           map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
   var places = search_bar.getPlaces();
+
   var bounds = new google.maps.LatLngBounds();
-  places.forEach(function(place)  {
-    if (!place.geometry)  {
-      console.log("returned place ontains no geometry");
-      return;
-    }
-markers.push(new google.maps.marker({
-  map: map,
-  icon: icon,
-  title: place.name,
-  position: place.geometry.location
-
-}));
-map.fitBounds(bounds);
-  });
-
   var i, place;
   for (i = 0; place = places[i]; i++) {
     (function(place) {
-    //  var marker = new google.maps.Marker({
-    var markers = [];
-            // Listen for the event fired when the user selects a prediction and retrieve
-            // more details for that place.
-            searchBox.addListener('places_changed', function() {
-              var places = searchBox.getPlaces();
+      var marker = new google.maps.Marker({
 
-              if (places.length == 0) {
-                return;
-              }
         position: place.geometry.location
       });
       marker.bindTo('map', search_bar, 'map');
