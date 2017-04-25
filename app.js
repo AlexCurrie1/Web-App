@@ -11,7 +11,7 @@ $( document ).ready(function() {
       $(location).attr('href',url);
     });
   });
-  // Create the search box and automatic search
+  // Create the search box and link UI Element
           var input = document.getElementById('search_bar');
           var searchBox = new google.maps.places.SearchBox(input);
           map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
