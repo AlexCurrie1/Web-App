@@ -38,6 +38,5 @@ $( document ).ready(function() {
   search_bar.set('map', map);
   map.setZoom(Math.min(map.getZoom(),12));
 
-  });
-  }
+
   //google.maps.event.addDomListener(window, 'load', init);
