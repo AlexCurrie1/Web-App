@@ -1,0 +1,43 @@
+html {
+    background: url("map.png") no-repeat center center fixed;
+    background-size: 100% 100%;
+}
+
+.search-area
+{
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  width: 50%;
+  text-align: center;
+}
+
+#search_bar {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  font-size:30px;
+ }
+
+#search_button{
+  margin:0 auto;
+}
+
+/*#sitelogo {
+    margin:auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 100px;
+
+}
+*/
+#logoimage {
+  margin-left: 30%;
+  margin-right: 70%;
+    width: auto;
+    height: 200px;
+    align: center;
+}

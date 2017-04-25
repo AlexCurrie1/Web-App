@@ -1,0 +1,32 @@
+#SiteTitle {
+  z-index: 100;
+  position: relative;
+  color: blue;
+  font-family: 'Lobster Two', cursive;
+  font-size: 50pt;
+  text-align: center;
+}
+
+#googleMap {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: -200px;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+
+#boxed {
+  z-index: 100;
+  position: relative;
+    border: 1px solid black ;
+    width: 200px;
+    height: 400px;
+    background-color: #336699;
+    color: white;
+    margin-left: auto;
+    margin-right: 10px;
+
+  }
+}
