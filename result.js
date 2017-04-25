@@ -10,8 +10,6 @@ $( document ).ready(function() {
 
 });
 
-<<<<<<< HEAD
-=======
 
 /*function myMap() {
 
