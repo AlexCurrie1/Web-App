@@ -13,7 +13,7 @@ $( document ).ready(function() {
 });
 
 
-function myMap() {
+/*function myMap() {
 
         var mapProp= {
           center:new google.maps.LatLng(51.508742,-0.120850),
@@ -22,24 +22,13 @@ function myMap() {
 
   var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
   };
-
-      function geocodeAddress(geocoder, resultsMap) {
-
-            var geocoder = new google.maps.Geocoder(document.getElementById('submit'));
-                 function geocodeAddress(geocoder, map) {
-                  console.log(geocoder);
-                };
-
-        var address = document.getElementById('address').value;
-        geocoder.geocode({'address': address}, function(results, status) {
-          if (status === 'OK') {
-            resultsMap.setCenter(results[0].geometry.location);
-            var marker = new google.maps.Marker({
-            map: resultsMap,
-              position: results[0].geometry.location
-            });
-          } else {
-            alert('Geocode was not successful for the following reason: ' + status);
-      };
-    });
-  };
+*/
+  function init() {
+     var map = new google.maps.Map(document.getElementById('googleMap'), {
+       center: {
+         lat: 51.508742,
+         lng: -0.120850
+       },
+       zoom: 12
+     });
+};
