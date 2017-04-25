@@ -21,7 +21,6 @@ $( document ).ready(function() {
   var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
   };
 */
->>>>>>> origin/master
   function init() {
      var map = new google.maps.Map(document.getElementById('googleMap'), {
        center: {
